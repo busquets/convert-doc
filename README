@@ -1,4 +1,11 @@
-convert-doc ist ein Skript zum Umwandeln von docx Dokumenten 
-nach odt bzw pdf mittels online-converter.
+convert-doc ist ein Skript zum Umwandeln von Microsoft Office Dkumenten:
+
+- odt  > docx
+- doc  > odt
+- doc  > pdf
+- docx > pdf
+
+Die Umwandlung übernimmt ein Online converter der intern Microsoft Office verwendet.
+
 Nach Installation des deb Pakets mit sudo dpkg -i convert-doc 
-kann ein Dokument mit öffnen mit umgewandelt werden.
+kann ein Dokument mit öffnen mit ausgewählt und umgewandelt werden.
