@@ -1,0 +1,11 @@
+[Desktop Entry]
+Terminal=true
+Icon=odt
+Type=Application
+Categories=Office;WordProcessor;
+NoDisplay=true
+Exec=convert-doc odt %f
+MimeType=application/msword;application/vnd.openxmlformats-officedocument.wordprocessingml.document;
+Name=odt-erstellen
+Comment=Erstellen von odt Dokumenten
+Name=convert-odt

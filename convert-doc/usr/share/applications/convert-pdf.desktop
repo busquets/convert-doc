@@ -1,0 +1,11 @@
+[Desktop Entry]
+Terminal=true
+Icon=pdf
+Type=Application
+Categories=Office;WordProcessor;
+NoDisplay=true
+Exec=convert-doc pdf %f
+MimeType=application/vnd.oasis.opendocument.text;application/msword;application/vnd.openxmlformats-officedocument.wordprocessingml.document;
+Name=pdf-erstellen
+Comment=Erstelen von pdf-Dokumenten
+Name=convert-pdf

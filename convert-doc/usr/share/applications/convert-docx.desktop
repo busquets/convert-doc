@@ -1,0 +1,11 @@
+[Desktop Entry]
+Terminal=true
+Icon=docx
+Type=Application
+Categories=Office;WordProcessor;
+NoDisplay=true
+Exec=convert-doc docx %f
+MimeType=application/vnd.oasis.opendocument.text;
+Name=docx-erstellen
+Comment=Umwandeln von odt nach docx Dokumenten
+Name=convert-docx
