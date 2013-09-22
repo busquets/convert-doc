@@ -1,0 +1,2 @@
+Skript zum Umwandeln von docx Dokumenten nach odt bzw pdf mittels online-converter.
+Nach Installation des deb Pakets mit sudo dpkg -i convert-doc kann ein Dokument mit öffnen mit umgewandelt werden.
