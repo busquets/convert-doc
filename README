@@ -1,9 +1,9 @@
 convert-doc ist ein Skript zum Umwandeln von Microsoft Office Dkumenten:
 
-- odt  > docx
-- doc  > odt
-- doc  > pdf
-- docx > pdf
+   odt  --> docx
+   doc  --> odt
+   doc  --> pdf
+   docx --> pdf
 
 Die Umwandlung übernimmt ein Online converter der intern Microsoft Office verwendet.
 
