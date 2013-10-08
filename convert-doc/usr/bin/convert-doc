@@ -41,13 +41,12 @@ echo "Folgende id wurde gefunden:"
 echo "$key,$id"
 echo "Konvertierung läuft..."
 #Umwandlungs Status erfragen:
-status="start"
-while [ -n "$status" ]
+status=""
+while [ -z "$status" ]
   do
-   sleep 3
+  sleep 2
   statuszeile=$(curl --data "0%5Bid%5D=$id&0%5Bkey%5D=$key" http://docspal.com/api/web-conversions/get-conversion-status --silent)
-  status=$(echo "$statuszeile" | grep -o "Running")
-
+  status=$(echo "$statuszeile" | grep -o "Success")
 done
 echo "$statuszeile"
 #url parsen und ins aktuelle Verzeichnis downloaden
