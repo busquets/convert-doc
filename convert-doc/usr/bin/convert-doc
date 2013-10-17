@@ -47,7 +47,7 @@ while [ -z "$status" ]
   sleep 1
   statuszeile=$(curl --data "0%5Bid%5D=$id&0%5Bkey%5D=$key" http://docspal.com/api/web-conversions/get-conversion-status --silent)
   status=$(echo "$statuszeile" | grep -o "Success")
-  echo "$status"'-> \c'
+  printf -- '-->%s' "$status"
 done
 echo "$statuszeile"
 #url parsen und ins aktuelle Verzeichnis downloaden
