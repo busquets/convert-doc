@@ -1,7 +1,7 @@
 #!/bin/sh
 #doc_convert Zielformat Dateiname
 pfad=$(pwd);
-cd $(dirname "$2")
+cd "$(dirname "$2")"
 Zielformat=$(echo "$1" | tr '[:upper:]' '[:lower:]')
  if [ "$Zielformat" = "pdf" ] 
 	then Dateiformat="DocumentPDF"
@@ -44,9 +44,10 @@ echo "Konvertierung läuft..."
 status=""
 while [ -z "$status" ]
   do
-  sleep 2
+  sleep 1
   statuszeile=$(curl --data "0%5Bid%5D=$id&0%5Bkey%5D=$key" http://docspal.com/api/web-conversions/get-conversion-status --silent)
   status=$(echo "$statuszeile" | grep -o "Success")
+  echo "$status ., \c"
 done
 echo "$statuszeile"
 #url parsen und ins aktuelle Verzeichnis downloaden
