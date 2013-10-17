@@ -1,12 +1,12 @@
 Package: convert-doc
-Version: 0.1
+Version: 1.0
 Architecture: all
 Maintainer: busquets <busquets.barca@gmail.com>
 Installed-Size: 96
 Depends: curl, xdg-utils, libnotify-bin, wget
 Section: text
 Priority: optional
-Homepage: http://tastenrabe.de
+Homepage: https://github.com/busquets/convert-doc
 Description: Umwandler für Officeformate
  Die Dokumente können via Kontextmenü im Dateimanager umgewandelt werden.
  Die Umwandlung findet auf einem fremden Server statt, wobei die Kommunikation unverschlüsselt abläuft. 
