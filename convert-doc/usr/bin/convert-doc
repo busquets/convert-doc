@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #doc_convert Zielformat Dateiname
 pfad=$(pwd);
 cd "$(dirname "$2")"
@@ -19,17 +19,18 @@ Zielformat=$(echo "$1" | tr '[:upper:]' '[:lower:]')
 #eingangsformat
 Datei=$(basename "$2")
 dateityp=$(xdg-mime query filetype "$Datei")
- if [ "$dateityp" = "application/vnd.ms-word" ]
-	then Format="DocumentDOC"
- elif [ "$dateityp" = "application/vnd.oasis.opendocument.text" ] 
-	then Format="DocumentODT"
- elif [ "$dateityp" = "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ] 
-	then Format="DocumentDOCX"
- else
-	echo "Diese Datei kann nicht umgewandelt werden!"
+
+if [ "$dateityp" != "${string/'application/vnd.ms-word'/}" ]
+  then Format="DocumentDOC"
+elif [ "$dateityp" != "${string/'application/vnd.oasis.opendocument.text'/}" ]
+  then Format="DocumentODT"
+elif [ "$dateityp" != "${string/'application/vnd.openxmlformats-officedocument.wordprocessingml.document'/}" ]
+  then Format="DocumentDOCX"
+else
+  echo "Diese Datei kann nicht umgewandelt werden!"
 	cd "$pfad"
 	exit 0
- fi
+fi
 echo "Datei: $Datei"
 echo "Zielformat: $Dateiformat"
 
