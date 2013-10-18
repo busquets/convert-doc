@@ -1,18 +1,17 @@
 # convert-doc
 
-Da das Importieren von doc bzw docx Dokumenten in Libreoffice manchmal Probleme im Layout verursacht,
-muss man die proprietären Microsoft Office Dateien erst in das offene odt Format umwandeln.
-Dies geschieht mit diesem Skript über den online-converter http://docspal.com, der intern Microsoft Office verwendet.
+Convert-doc is a script which uses http://docspal.com to convert Microsoft Office files.
+It can be useful for a Libreoffice user who deals often with these proprietary File Formates.
 
-Folgende Umwandlungen werden unterstützt: 
+These conversations are implemented:
 
   * odt  --> docx
   * doc  --> odt
   * doc  --> pdf
   * docx --> pdf
 
-Das Debian Paket convert-doc.deb sollte wegen minimaler Abhängigkeiten
-auf allen Debian-basierten Distributionen installierbar sein.
-(Debian, Ubuntu , LinuxMint...)
-Nach Installation des Pakets mit `sudo dpkg -i convert-doc.deb`
-kann ein Dokument mit öffnen mit ausgewählt und umgewandelt werden.
+The Debian Package is for Debian based Distributions (Debian, Ubuntu , LinuxMint...)
+It can installed with: `sudo dpkg -i convert-doc.deb`
+The tar.xz file is a Package for Arch Linux.
+`pacman -U convert-doc-1.0-0-any.pkg.tar.xz`
+Installed, there should a context menu for doc, docx and odt files appear, which allows converting them. (Also multiple files parallel)
