@@ -1,5 +1,5 @@
-#!/bin/bash
-#doc_convert Zielformat Dateiname
+#!/bin/sh
+#doc-convert Zielformat Dateiname
 pfad=$(pwd);
 cd "$(dirname "$2")"
 Zielformat=$(echo "$1" | tr '[:upper:]' '[:lower:]')
@@ -20,11 +20,15 @@ Zielformat=$(echo "$1" | tr '[:upper:]' '[:lower:]')
 Datei=$(basename "$2")
 dateityp=$(xdg-mime query filetype "$Datei")
 
-if [ "$dateityp" != "${string/'application/vnd.ms-word'/}" ]
+doc=$(echo "$dateityp" | grep 'application/vnd.ms-word')
+odt=$(echo "$dateityp" | grep 'application/vnd.oasis.opendocument.text')
+docx=$(echo "$dateityp" | grep 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+
+if [ "$doc" != "" ]
   then Format="DocumentDOC"
-elif [ "$dateityp" != "${string/'application/vnd.oasis.opendocument.text'/}" ]
+elif [ "$odt" != "" ]
   then Format="DocumentODT"
-elif [ "$dateityp" != "${string/'application/vnd.openxmlformats-officedocument.wordprocessingml.document'/}" ]
+elif [ "$docx" != "" ]
   then Format="DocumentDOCX"
 else
   echo "Diese Datei kann nicht umgewandelt werden!"
@@ -32,6 +36,7 @@ else
 	exit 0
 fi
 echo "Datei: $Datei"
+echo "Dateiformat: $Format"
 echo "Zielformat: $Dateiformat"
 
 #nach docspal.com uploaden
