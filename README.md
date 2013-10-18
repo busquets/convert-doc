@@ -10,8 +10,13 @@ These conversations are implemented:
   * doc  --> pdf
   * docx --> pdf
 
-The Debian Package is for Debian based Distributions (Debian, Ubuntu , LinuxMint...)
+The Debian Package is for Debian based distributions (Debian, Ubuntu , LinuxMint...)
+
 It can installed with: `sudo dpkg -i convert-doc.deb`
+
 The tar.xz file is a Package for Arch Linux.
+
 `pacman -U convert-doc-1.0-0-any.pkg.tar.xz`
-Installed, there should a context menu for doc, docx and odt files appear, which allows converting them. (Also multiple files parallel)
+
+Installed, there should a context menu for doc, docx and odt files appear, 
+which allows converting them. (Also multiple files parallel)
