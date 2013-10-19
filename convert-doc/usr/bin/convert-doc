@@ -4,17 +4,17 @@ pfad=$(pwd);
 cd "$(dirname "$2")"
 Zielformat=$(echo "$1" | tr '[:upper:]' '[:lower:]')
  if [ "$Zielformat" = "pdf" ] 
-	then Dateiformat="DocumentPDF"
+        then Dateiformat="DocumentPDF"
  elif [ "$Zielformat" = "odt" ] 
-	then Dateiformat="DocumentODT"
+        then Dateiformat="DocumentODT"
  elif [ "$Zielformat" = "docx" ] 
-	then Dateiformat="DocumentDOCX"
+        then Dateiformat="DocumentDOCX"
  elif [ "$Zielformat" = "doc" ] 
-	then Dateiformat="DocumentDOC"
+        then Dateiformat="DocumentDOC"
  else
-	echo "Bitte das gewünschte Zielformat angeben!"
-	cd "$pfad"
-	exit 0
+        echo "Bitte das gewünschte Zielformat angeben!"
+        cd "$pfad"
+        exit 0
  fi
 #eingangsformat
 Datei=$(basename "$2")
@@ -32,8 +32,8 @@ elif [ "$docx" != "" ]
   then Format="DocumentDOCX"
 else
   echo "Diese Datei kann nicht umgewandelt werden!"
-	cd "$pfad"
-	exit 0
+        cd "$pfad"
+        exit 0
 fi
 echo "Datei: $Datei"
 echo "Dateiformat: $Format"
@@ -50,10 +50,10 @@ echo "Konvertierung läuft..."
 status=""
 while [ -z "$status" ]
   do
-  sleep 1
   statuszeile=$(curl --data "0%5Bid%5D=$id&0%5Bkey%5D=$key" http://docspal.com/api/web-conversions/get-conversion-status --silent)
   status=$(echo "$statuszeile" | grep -o "Success")
   printf -- '-->%s' "$status"
+  sleep 1
 done
 echo "$statuszeile"
 #url parsen und ins aktuelle Verzeichnis downloaden
