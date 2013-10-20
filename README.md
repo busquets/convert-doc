@@ -1,14 +1,15 @@
 # convert-doc
 
 Convert-doc is a script which uses http://docspal.com to convert Microsoft Office files.
-It can be useful for a Libreoffice user who deals often with these proprietary File Formates.
+It can be useful for a Libreoffice user who deals often with these proprietary file formates.
 
 These conversations are implemented:
 
-  * odt  --> docx
+  * odt <--> docx
   * doc  --> odt
   * doc  --> pdf
   * docx --> pdf
+  * odt  --> pdf
 
 The Debian Package is for Debian based distributions (Debian, Ubuntu , LinuxMint...)
 
