@@ -3,7 +3,7 @@
 Convert-doc is a script which uses http://docspal.com to convert Microsoft Office files.
 It can be useful for a Libreoffice user who deals often with these proprietary file formates.
 
-These conversations are implemented:
+The following conversations are implemented:
 
   * odt <--> docx
   * doc  --> odt
